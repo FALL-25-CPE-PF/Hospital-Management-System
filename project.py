@@ -78,5 +78,45 @@ def save_data():
         file.close()
     except:
         print("Error saving data!")
+        
+# ---------- ADMIN FUNCTIONS ----------
+
+def add_patient():
+    pid = input("Enter Patient ID: ")
+
+    if pid in patients:
+        print("Patient already exists!")
+        return
+
+    name = input("Enter Name: ")
+
+    try:
+        age = int(input("Enter Age: "))
+    except ValueError:
+        print("Age must be a number.")
+        return
+
+    gender = input("Enter Gender: ")
+    disease = input("Enter Disease: ")
+    doctor = input("Assign Doctor: ")
+
+    # 🔹 NEW: INITIAL BILL AT REGISTRATION
+    try:
+        initial_bill = int(input("Enter Initial Bill Amount: "))
+    except ValueError:
+        print("Invalid bill amount. Patient not added.")
+        return
+
+    patients[pid] = {
+        "name": name,
+        "age": str(age),
+        "gender": gender,
+        "disease": disease,
+        "doctor": doctor,
+        "history": [],
+        "bill": [initial_bill]   # bill added here
+    }
+
+    print("Patient added successfully with initial bill!")        
 
 
