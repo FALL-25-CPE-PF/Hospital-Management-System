@@ -117,6 +117,11 @@ def add_patient():
         "bill": [initial_bill]   # bill added here
     }
 
-    print("Patient added successfully with initial bill!")        
+    print("Patient added successfully with initial bill!") 
+       
+def view_patients():
+    if not patients:
+        print("No patients found.")
+        return        
 
 
