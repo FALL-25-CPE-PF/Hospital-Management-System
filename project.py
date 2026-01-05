@@ -123,5 +123,11 @@ def view_patients():
     if not patients:
         print("No patients found.")
         return        
+def assign_doctor():
+    pid = input("Enter Patient ID: ")
+
+    if pid not in patients:
+        print("Patient not found!")
+        return
 
 
