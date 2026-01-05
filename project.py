@@ -129,5 +129,10 @@ def assign_doctor():
     if pid not in patients:
         print("Patient not found!")
         return
+def add_history():
+    pid = input("Enter Patient ID: ")
 
+    if pid not in patients:
+        print("Patient not found!")
+        return
 
