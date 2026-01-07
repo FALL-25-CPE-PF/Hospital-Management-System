@@ -147,6 +147,10 @@ def assign_doctor():
     if pid not in patients:
         print("Patient not found!")
         return
+    doctor = input("Enter New Doctor Name: ")
+    patients[pid]["doctor"] = doctor
+    print("Doctor updated successfully!")
+
 def add_history():
     pid = input("Enter Patient ID: ")
 
