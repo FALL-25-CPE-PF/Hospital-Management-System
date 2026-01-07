@@ -122,7 +122,25 @@ def add_patient():
 def view_patients():
     if not patients:
         print("No patients found.")
-        return        
+        return 
+    for pid, data in patients.items():
+        print("\nPatient ID:", pid)
+        print("Name:", data["name"])
+        print("Age:", data["age"])
+        print("Gender:", data["gender"])
+        print("Disease:", data["disease"])
+        print("Doctor:", data["doctor"])
+
+        print("Medical History:")
+        if not data["history"]:
+            print("No history available.")
+        for h in data["history"]:
+            print("-", h)
+
+        total = 0
+        for b in data["bill"]:
+            total += b
+        print("Total Bill:", total)       
 def assign_doctor():
     pid = input("Enter Patient ID: ")
 
