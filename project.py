@@ -227,5 +227,14 @@ def patient_view():
     for b in data["bill"]:
         total += b
     print("Total Bill:", total)
+    
+load_data()
+
+while True:
+    print("\n=== HOSPITAL MANAGEMENT SYSTEM ===")
+    print("1. Admin View")
+    print("2. Patient View")
+    print("3. Exit")    
+    
 
     
