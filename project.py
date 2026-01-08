@@ -234,7 +234,20 @@ while True:
     print("\n=== HOSPITAL MANAGEMENT SYSTEM ===")
     print("1. Admin View")
     print("2. Patient View")
-    print("3. Exit")    
+    print("3. Exit") 
+      
+    ch = input("Enter choice: ")
+
+    if ch == "1":
+        admin_menu()
+    elif ch == "2":
+        patient_view()
+    elif ch == "3":
+        save_data()
+        print("Data saved. Exiting system...")
+        break
+    else:
+        print("Invalid choice!")    
     
 
     
