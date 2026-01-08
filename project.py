@@ -157,4 +157,7 @@ def add_history():
     if pid not in patients:
         print("Patient not found!")
         return
+    note = input("Enter medical note: ")
+    patients[pid]["history"].append(note)
+    print("Medical history added.")
 
