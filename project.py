@@ -235,7 +235,7 @@ while True:
     print("1. Admin View")
     print("2. Patient View")
     print("3. Exit") 
-      
+
     ch = input("Enter choice: ")
 
     if ch == "1":
