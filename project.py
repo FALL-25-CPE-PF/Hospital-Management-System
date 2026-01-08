@@ -182,4 +182,22 @@ def admin_menu():
         print("4. Add Medical History")
         print("5. Add Bill")
         print("6. Back")
+        
+        choice = input("Enter choice: ")
+
+        if choice == "1":
+            add_patient()
+        elif choice == "2":
+            view_patients()
+        elif choice == "3":
+            assign_doctor()
+        elif choice == "4":
+            add_history()
+        elif choice == "5":
+            add_bill()
+        elif choice == "6":
+            save_data()
+            break
+        else:
+            print("Invalid choice!")
 
