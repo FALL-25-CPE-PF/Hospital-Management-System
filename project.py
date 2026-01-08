@@ -160,4 +160,10 @@ def add_history():
     note = input("Enter medical note: ")
     patients[pid]["history"].append(note)
     print("Medical history added.")
+def add_bill():
+    pid = input("Enter Patient ID: ")
+
+    if pid not in patients:
+        print("Patient not found!")
+        return    
 
