@@ -172,4 +172,14 @@ def add_bill():
         print("Bill added successfully.")
     except ValueError:
         print("Invalid amount!")  
+def admin_menu():
+    while True:
+        print("\n--- ADMIN MENU ---")
+        print("Total Patients:", len(patients))
+        print("1. Add Patient")
+        print("2. View All Patients")
+        print("3. Assign / Change Doctor")
+        print("4. Add Medical History")
+        print("5. Add Bill")
+        print("6. Back")
 
