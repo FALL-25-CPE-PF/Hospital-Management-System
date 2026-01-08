@@ -200,4 +200,21 @@ def admin_menu():
             break
         else:
             print("Invalid choice!")
+            # ---------- PATIENT VIEW ----------
+def patient_view():
+    pid = input("Enter Patient ID: ")
 
+    if pid not in patients:
+        print("Patient not found!")
+        return
+
+    data = patients[pid]
+
+    print("\n--- PATIENT DETAILS ---")
+    print("Name:", data["name"])
+    print("Age:", data["age"])
+    print("Gender:", data["gender"])
+    print("Disease:", data["disease"])
+    print("Doctor:", data["doctor"])
+
+    
