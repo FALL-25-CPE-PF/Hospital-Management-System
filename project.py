@@ -165,5 +165,11 @@ def add_bill():
 
     if pid not in patients:
         print("Patient not found!")
-        return    
+        return
+    try:
+        amount = int(input("Enter bill amount: "))
+        patients[pid]["bill"].append(amount)
+        print("Bill added successfully.")
+    except ValueError:
+        print("Invalid amount!")  
 
