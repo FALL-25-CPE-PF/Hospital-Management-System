@@ -216,5 +216,16 @@ def patient_view():
     print("Gender:", data["gender"])
     print("Disease:", data["disease"])
     print("Doctor:", data["doctor"])
+    
+    print("Medical History:")
+    if not data["history"]:
+        print("No history available.")
+    for h in data["history"]:
+        print("-", h)
+
+    total = 0
+    for b in data["bill"]:
+        total += b
+    print("Total Bill:", total)
 
     
